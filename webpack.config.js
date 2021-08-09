@@ -60,18 +60,7 @@ module.exports = {
     port: port,
     open: true,
   },
+  devtool: "eval-cheap-source-map",
+  // 이게 없을 경우 개발자 도구에 source-map 관련 오류가 발생하고 추가함으로써 오류가 사라졌다.
+  // 추가적으로 더 알아봐야한다.
 };
-
-// loader는 아래의 module과 rule을 통해서 폼을 정의한다.
-// module: {
-//     rules: [
-//       {
-//         test: '빌드할 파일 확장자 정규식'
-//         exclude: '제외할 파일 정규식'
-//         use: {
-//           loader: '사용할 로더 이름'
-//           option: '로더 옵션'
-//         }
-//       }
-//     ]
-//   }
